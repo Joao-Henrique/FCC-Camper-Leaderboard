@@ -4,17 +4,21 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "gh-pages": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "description":
+    "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
@@ -26,5 +30,5 @@
   "bugs": {
     "url": "https://github.com/Joao-Henrique/FCC-Camper-Leaderboard/issues"
   },
-  "homepage": "https://github.com/Joao-Henrique/FCC-Camper-Leaderboard#readme"
+  "homepage": "https://joao-henrique.github.io/FCC-Camper-Leaderboard/"
 }
