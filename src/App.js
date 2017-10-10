@@ -1,8 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import axios from "axios";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      recentCampers: [],
+      allTimeCampers: [],
+      currentView: "recentCampers"
+    };
+  }
+
+  componentWillMount() {
+    axios.all([this.fetchRecentCampers(), this.fetchAllTimeCampers()]).then(
+      axios.spread(function(recentCampers, allTimeCampers) {
+        this.setState({
+          recentCampers: recentCampers
+        });
+      })
+    );
+  }
+
+  ////////      AXIOS GETS DATA FROM API        ////////
+  fetchRecentCampers() {
+    return axios.get("https://fcctop100.herokuapp.com/api/fccusers/top/recent");
+  }
+  fetchAllTimeCampers() {
+    return axios.get(
+      "https://fcctop100.herokuapp.com/api/fccusers/top/alltime"
+    );
+  }
+  ////////////////////////////////////////////////////////
+
   render() {
     return (
       <div className="App">
