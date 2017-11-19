@@ -1,2 +1,8 @@
 # FCC-Camper-Leaderboard
-Camper Leaderboard is the 2nd project of FreeCodeCamp's Data Visualization Certificate using React.js
+
+#### - Project description:
+
++ Camper Leaderboard is a Project made for [ FreeCodeCamp's]("https://www.freecodecamp.org/") Data Visualization Certification using React and React-Bootstrap.
+
++ Check it out on the [project.page](https://joao-henrique.github.io/FCC-Recipe-Box/).
+
